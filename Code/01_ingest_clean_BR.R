@@ -163,7 +163,6 @@ Precipitation_month=Precipitation |> group_by(code_muni,Year,Month) |>
 saveRDS(object = Precipitation_month,file = "Data_raw/Climate/Precipitation_month.rds")
 
 #### Control: Municipality level data ####
-library(sidrar)
 # Pob_2022 <- get_sidra(x = 6579,geo = "City",period ="202")
 Pob_2021 <- get_sidra(x = 6579,geo = "City",period ="2021")
 saveRDS(Pob_2021,file = "Data_raw/Pob_2021.rds")

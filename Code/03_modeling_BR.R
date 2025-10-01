@@ -1,10 +1,11 @@
 ## File:03_modeling_BR
 ## Objective: 
-## Read data, perform feature engineering and return a formatted panel to run models. 
-## Panel structure Year X Municipalit: Variable, climate shocks (rainfall)
+## Read panel data, run FE models. 
+## Save the resulting tables and figures in results in output folder.
+
+
 source("Code/99_utils.R")
-
-
+# Read panel
 Panel_SAEB_Climate=read_rds(file = "data_processed/Panel_SAEB_Climate")
 Panel_SAEB_Climate=Panel_SAEB_Climate|> ungroup()
 
@@ -14,8 +15,7 @@ Panel_SAEB_Climate |>
           Shock_Weather_2sd=mean(Shock_Weather_2sd)*100,
           Shock_Weather_3sd=mean(Shock_Weather_3sd)*100) 
 
-
-  library(fixest)
+## Main models
   mod_shock_1sd_MT <- feols(SAEBMT_ST ~ Shock_Weather_1sd | CO_MUNICIPIO + YEAR, data = Panel_SAEB_Climate)
   mod_shock_2sd_MT <- feols(SAEBMT_ST ~ Shock_Weather_2sd | CO_MUNICIPIO + YEAR, data = Panel_SAEB_Climate)
   mod_shock_3sd_MT <- feols(SAEBMT_ST ~ Shock_Weather_3sd | CO_MUNICIPIO + YEAR, data = Panel_SAEB_Climate)
@@ -27,8 +27,8 @@ Panel_SAEB_Climate |>
   mod_shock_1sd_TA9 <- feols(TA9 ~ Shock_Weather_1sd | CO_MUNICIPIO + YEAR, data = Panel_SAEB_Climate)
   mod_shock_2sd_TA9 <- feols(TA9 ~ Shock_Weather_2sd | CO_MUNICIPIO + YEAR, data = Panel_SAEB_Climate)
   mod_shock_3sd_TA9 <- feols(TA9 ~ Shock_Weather_3sd | CO_MUNICIPIO + YEAR, data = Panel_SAEB_Climate)
-  
-  library(modelsummary)  
+
+# Table output  
   modelsummary(
     list(
       "SAEB Math std" = mod_shock_1sd_MT, 
@@ -49,8 +49,7 @@ Panel_SAEB_Climate |>
     gof_omit = "IC|Log|Adj|Within",output = "outputs/tables/FE_models.xlsx")  # 
   
   
-  ## Robustnes check
-  library(fixest)
+## Robustness check, same results.
   mod_shock_1sd_MT_R <- feols(SAEBMT_ST ~ Shock_Weather_1sd | CO_MUNICIPIO + YEAR, data = Panel_SAEB_Climate |> filter(YEAR!=2009))
   mod_shock_2sd_MT_R <- feols(SAEBMT_ST ~ Shock_Weather_2sd | CO_MUNICIPIO + YEAR, data = Panel_SAEB_Climate|> filter(YEAR!=2009))
   mod_shock_3sd_MT_R <- feols(SAEBMT_ST ~ Shock_Weather_3sd | CO_MUNICIPIO + YEAR, data = Panel_SAEB_Climate|> filter(YEAR!=2009))
@@ -83,7 +82,7 @@ Panel_SAEB_Climate |>
     gof_omit = "IC|Log|Adj|Within",output = "outputs/tables/FE_models_ROBUST.xlsx") 
   
   
-  ## EFFECTS BY MONTH  
+## EFFECTS BY MONTH and output.
   mod_shock_2sd_MT_COUNTS <- feols(SAEBMT_ST ~ as.factor(NMonths_Extreme_1sd) | CO_MUNICIPIO + YEAR, data = Panel_SAEB_Climate)
   mod_shock_2sd_LP_COUNTS <- feols(SAEBLP_ST ~ as.factor(NMonths_Extreme_1sd) | CO_MUNICIPIO + YEAR, data = Panel_SAEB_Climate)
   mod_shock_2sd_TA9_COUNTS <- feols(TA9 ~ as.factor(NMonths_Extreme_1sd) | CO_MUNICIPIO + YEAR, data = Panel_SAEB_Climate)
