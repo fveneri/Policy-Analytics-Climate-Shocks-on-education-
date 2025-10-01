@@ -1,8 +1,8 @@
 # Policy-Analytics-Climate
-This repo contains the replication package for a policy analytics on climate challenges and development outcomes project. The repo provides the code used and clean versions of the data used as RDS for replication purposes. The raw data is available upon request or found in the files described in the data sources section.
+This repo contains the replication package for a policy analytics on climate challenges and development outcomes project. The repo provides the code used and clean versions of the data used as RDS for replication purposes. The raw data is available upon request or found in the files described in the data sources section or in [data links](./Data_links/):
 
 ## The following data is made available
-- [Data Clean](./Data_raw/): Provides the clean version of the data used for this project. \
+- [Data Clean](./Data_raw/): Provides the clean version of the data used for this project. 
     - SAEB Municipality-level educational outcomes: Standardized tests in Math and Language.
     - Municipality-level monthly precipitation: Aggregated rainfall for 1980-2022.
     - Municipal shapefiles
@@ -28,7 +28,7 @@ There are 4 main R scripts to reproduce the results in  [Code](./Code/)
 ## Data Sources: 
 Additional information is presented on the slides.
  - [INEP-SAEB](https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados)
- - [IBGE-shapefiles] (https://www.ibge.gov.br/en/geosciences/territorial-organization/territorial-meshes/18890-municipal-mesh.html)
+ - [IBGE-shapefiles](https://www.ibge.gov.br/en/geosciences/territorial-organization/territorial-meshes/18890-municipal-mesh.html)
  - [Zonal Statistics of Weather Indicators for Brazilian Municipalities](https://zenodo.org/records/13906834). Available under Creative Commons atribution 4
 
 ## Replication. 
