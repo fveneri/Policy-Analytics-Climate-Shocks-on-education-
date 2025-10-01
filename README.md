@@ -14,8 +14,7 @@ This repo contains the replication package for a policy analytics on climate cha
 
 
 ## Results: 
-Results are presented as slides in  
-    - [Slide](./docs/):
+Results are presented as slides in  [Slide](./docs/):
 
 ## Code 
 There are 4 main R scripts to reproduce the results in  [Code](./Code/)
@@ -26,14 +25,11 @@ There are 4 main R scripts to reproduce the results in  [Code](./Code/)
    - [Visual](./Code/04_Visuals_BR.R): Produce visualitations used on the slides.
    - [Utils](./Code/99_utils_BR.R): Loads the libraries used and utility functions.
 
-
-
-
 ## Data Sources: 
 Additional information is presented on the slides.
  - [INEP-SAEB](https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados)
  - [IBGE-shapefiles] (https://www.ibge.gov.br/en/geosciences/territorial-organization/territorial-meshes/18890-municipal-mesh.html)
- - [Zonal Statistics of Weather Indicators for Brazilian Municipalities](https://zenodo.org/records/13906834)  
+ - [Zonal Statistics of Weather Indicators for Brazilian Municipalities](https://zenodo.org/records/13906834). Available under Creative Commons atribution 4
 
+## Replication. 
 
-## Short list of relevant literature 
