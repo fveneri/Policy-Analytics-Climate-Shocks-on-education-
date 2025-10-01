@@ -10,13 +10,23 @@ This repo contains the replication package for a policy analytics on climate cha
        
 - [Panel data](./data_processed/): Provides a balanced panel of municipalities, with educational outcomes and yearly information on climate shocks.
 
+- Due to logistical limitations, full raw data is available upon request or can be accessed from the links in the data section.
+
 
 ## Results: 
-Results are presented in a slide in  
+Results are presented as slides in  
     - [Slide](./docs/):
 
 ## Code 
-To reproduce the code
+There are 4 main R scripts to reproduce the results in  [Code](./Code/)
+    -[Ingest](./Code/01_ingest_clean_BR.R): performs the initial data ingestion and initial data cleaning, results are saved on [Data_raw](./Data_raw/).
+        Simplified files are saved as RDS to allow replication of the code.
+   - [Feature Engineering](./Code/02_feature_engineering.R): performs feature engineering and prepares a balanced panel with educational outcomes at the municipality level and indicators for climate shock events during the school year.
+   - [Modeling](./Code/03_modeling_BR.R): Produce estimates to quantify the relationship between rainfall shocks and educational outcomes.
+   - [Visual](./Code/04_Visuals_BR.R): Produce visualitations used on the slides.
+   - [Utils](./Code/99_utils_BR.R): Loads the libraries used and utility functions.
+
+
 
 
 
