@@ -18,6 +18,7 @@ Results are presented as slides in  [Slide](./docs/):
 
 ## Code 
 There are 4 main R scripts to reproduce the results in  [Code](./Code/)
+
     -[Ingest](./Code/01_ingest_clean_BR.R): performs the initial data ingestion and initial data cleaning, results are saved on [Data_raw](./Data_raw/).
         Simplified files are saved as RDS to allow replication of the code.
    - [Feature Engineering](./Code/02_feature_engineering.R): performs feature engineering and prepares a balanced panel with educational outcomes at the municipality level and indicators for climate shock events during the school year.
