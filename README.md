@@ -29,7 +29,23 @@ There are 4 main R scripts to reproduce the results in  [Code](./Code/)
 Additional information is presented on the slides.
  - [INEP-SAEB](https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados)
  - [IBGE-shapefiles](https://www.ibge.gov.br/en/geosciences/territorial-organization/territorial-meshes/18890-municipal-mesh.html)
- - [Zonal Statistics of Weather Indicators for Brazilian Municipalities](https://zenodo.org/records/13906834). Available under Creative Commons atribution 4
+ - [Zonal Statistics of Weather Indicators for Brazilian Municipalities](https://zenodo.org/records/13906834). Available under Creative Commons attribution 4
 
 ## Replication. 
-
+Analysis was performed using R (4.0).
+The main libraries required are presented at the start of the utils script. The first lines check if the libraries are available and can be uploaded. 
+   tidyverse: 2.0.0        
+   sidrar: 0.2.9        
+   chirps: 0.1.4
+   zip: 2.2.3
+   rnaturalearth: 1.0.1
+   sf: 1.0.19
+   curl: 6.3.0
+   readx: 1.4.3
+   microdatasus: 2.4.3
+   fixest: 0.12.1
+   modelsummary: 2.50
+   tmap: 4.0
+   httr: 1.4.7
+   arrow: 17.0.0.1
+   geobr: 1.9.1
