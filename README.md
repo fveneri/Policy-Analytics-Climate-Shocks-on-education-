@@ -35,7 +35,7 @@ Analysis was performed using R (4.0). To run a short replication run, the user c
 
 A one click run file is included in run.bat, please ensure that you have R installed and that your system can access R.
 
-The main libraries required are presented at the start of the utils script. The first lines check if the libraries are available and can be uploaded. 
+The main libraries required are presented at the start of the utils script. The first lines check if the libraries are available and can be loaded. 
   - tidyverse: 2.0.0        
   - sidrar: 0.2.9        
   - chirps: 0.1.4
