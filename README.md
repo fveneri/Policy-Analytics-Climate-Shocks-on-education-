@@ -31,7 +31,9 @@ Additional information is presented on the slides, but the original microdata ca
  - [Zonal Statistics of Weather Indicators for Brazilian Municipalities](https://zenodo.org/records/13906834). Available under Creative Commons attribution 4
 
 ## Replication. 
-Analysis was performed using R (4.0). To run a short replication run, the user can run [can run](./Replication_run.R). This file starts with the simplified version of the files saves as RDS and produce the output required. Note that the ingestion section was comented out to avoid longer procesing times.
+Analysis was performed using R (4.0). To run a short replication run, the user can run [Replication_run](./Replication_run.R). This file starts with the simplified version of the files saves as RDS and produce the output required. Note that the ingestion section was comented out to avoid longer procesing times. 
+
+A one click run file is included in run.bat, please ensure that you have R installed and that your system can access R.
 
 The main libraries required are presented at the start of the utils script. The first lines check if the libraries are available and can be uploaded. 
   - tidyverse: 2.0.0        
