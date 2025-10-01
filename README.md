@@ -26,7 +26,7 @@ There are 4 main R scripts to reproduce the results in  [Code](./Code/)
    - [Utils](./Code/99_utils_BR.R): Loads the libraries used and utility functions.
 
 ## Data Sources: 
-Additional information is presented on the slides.
+Additional information is presented on the slides, but original microdata can be found here:
  - [INEP-SAEB](https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados)
  - [IBGE-shapefiles](https://www.ibge.gov.br/en/geosciences/territorial-organization/territorial-meshes/18890-municipal-mesh.html)
  - [Zonal Statistics of Weather Indicators for Brazilian Municipalities](https://zenodo.org/records/13906834). Available under Creative Commons attribution 4
