@@ -7,5 +7,5 @@ This repo contains the replication package for Policy Analytics on Climate varia
     - Municipality-level monthly precipitation: Aggregated rainfall for 1980-2022.
     - Municipal shapefiles
     - Population for 2022
-    
-- [Data Clean](./data_processed/): Provides a balanced panel of municipalities, with educational outcomes and yearly information on climate shocks. 
+       
+- [Panel data](./data_processed/): Provides a balanced panel of municipalities, with educational outcomes and yearly information on climate shocks. 
