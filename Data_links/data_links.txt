@@ -1,0 +1,8 @@
+## Data Sources: Additional information is presented on the slides.
+# Shapefiles
+https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados
+# Education outcomes
+https://www.ibge.gov.br/en/geosciences/territorial-organization/territorial-meshes/18890-municipal-mesh.html
+https://download.inep.gov.br/ideb/resultados/divulgacao_anos_finais_municipios_202
+# Climate
+https://zenodo.org/records/13906834 Available under Creative Commons attribution 4
