@@ -20,6 +20,10 @@ Download_RAW_files(URL ="https://geoftp.ibge.gov.br/organizacao_do_territorio/ma
 zip::unzip(zipfile = "Data_raw/Shape/BR_Municipios_2023.zip",
            exdir = "Data_raw/Shape/BR_Municipios")
 
+Municipios <- st_read("Data_raw/Shape/BR_Municipios/BR_Municipios_2023.shp")
+Municipios=Municipios |> select(CD_MUN,NM_MUN)
+
+saveRDS(file = "Data_raw/Shape/Municipios.rds",Municipios)
 
 ### The following code is commented out, it requires a stable connection.
 ### Left for future use.
