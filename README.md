@@ -11,13 +11,14 @@ This repo contains the replication package for a policy analytics on climate cha
 - [Panel data](./data_processed/): Provides a balanced panel of municipalities, with educational outcomes and yearly information on climate shocks.
 
 
+## Results: 
+Results are presented in a slide in  
+    - [Slide](./docs/):
+
 ## Code 
 To reproduce the code
 
 
-## Results: 
-Results are presented in a slide in  
-- [Panel data](./data_processed/):
 
 ## Data used
 
