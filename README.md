@@ -33,7 +33,9 @@ Additional information is presented on the slides, but the original microdata ca
 ## Replication. 
 Analysis was performed using R (4.0). To run a short replication run, the user can run [Replication_run](./Replication_run.R). This file starts with the simplified version of the files saves as RDS and produce the output required. Note that the ingestion section was comented out to avoid longer procesing times. 
 
-A one click run file is included in run.bat, please ensure that you have R installed and that your system can access R.
+I recomend forking the repo if you are interested to reproduce the results. 
+
+A one click run file is included in run.bat, but had some issues in some systems, please ensure that you have R installed and that your system can access R.
 
 The main libraries required are presented at the start of the utils script. The first lines check if the libraries are available and can be loaded. 
   - tidyverse: 2.0.0        
