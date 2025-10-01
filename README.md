@@ -31,9 +31,9 @@ Additional information is presented on the slides, but the original microdata ca
  - [Zonal Statistics of Weather Indicators for Brazilian Municipalities](https://zenodo.org/records/13906834). Available under Creative Commons attribution 4
 
 ## Replication. 
-Analysis was performed using R (4.0). To run a short replication run, the user can run [Replication_run](./Replication_run.R). This file starts with the simplified version of the files saves as RDS and produce the output required. Note that the ingestion section was comented out to avoid longer procesing times. 
+Analysis was performed using R (4.0). To run a short replication run, the user can run [Replication_run](./Replication_run.R). This file starts with the simplified version of the files saved as RDS and produces the output required. Note that the ingestion section was commented out to avoid longer processing times. 
 
-I recomend forking the repo if you are interested to reproduce the results. 
+I recommend forking the repo if you are interested in reproducing the results. 
 
 A one click run file is included in run.bat, but had some issues in some systems, please ensure that you have R installed and that your system can access R.
 
