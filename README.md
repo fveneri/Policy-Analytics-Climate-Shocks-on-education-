@@ -16,7 +16,7 @@ This repo contains the replication package for a policy analytics on climate cha
 ## Results: 
 Results are presented as slides in  [Slide](./docs/):
 
-## Code 
+## Main Code 
 There are 4 main R scripts to reproduce the results in  [Code](./Code/).
    - [Ingest](./Code/01_ingest_clean_BR.R): performs the initial data ingestion and initial data cleaning; results are saved on [Data_raw](./Data_raw/).Simplified files are saved as RDS to allow replication of the code.
    - [Feature Engineering](./Code/02_feature_engineering.R): performs feature engineering and prepares a balanced panel with educational outcomes at the municipality level and indicators for climate shock events during the school year.
@@ -25,13 +25,14 @@ There are 4 main R scripts to reproduce the results in  [Code](./Code/).
    - [Utils](./Code/99_utils_BR.R): Loads the libraries used and utility functions.
 
 ## Data Sources: 
-Additional information is presented on the slides, but original microdata can be found here:
+Additional information is presented on the slides, but the original microdata can be found here:
  - [INEP-SAEB](https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados)
  - [IBGE-shapefiles](https://www.ibge.gov.br/en/geosciences/territorial-organization/territorial-meshes/18890-municipal-mesh.html)
  - [Zonal Statistics of Weather Indicators for Brazilian Municipalities](https://zenodo.org/records/13906834). Available under Creative Commons attribution 4
 
 ## Replication. 
-Analysis was performed using R (4.0).
+Analysis was performed using R (4.0). To run a short replication run, the user can run [can run](./Replication_run.R). This file starts with the simplified version of the files saves as RDS and produce the output required. Note that the ingestion section was comented out to avoid longer procesing times.
+
 The main libraries required are presented at the start of the utils script. The first lines check if the libraries are available and can be uploaded. 
   - tidyverse: 2.0.0        
   - sidrar: 0.2.9        
