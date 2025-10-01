@@ -4,7 +4,7 @@
 ## Save the resulting tables and figures in results in output folder.
 
 
-source("Code/99_utils.R")
+# source("Code/99_utils.R")
 # Read panel
 Panel_SAEB_Climate=read_rds(file = "data_processed/Panel_SAEB_Climate")
 Panel_SAEB_Climate=Panel_SAEB_Climate|> ungroup()

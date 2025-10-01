@@ -1,25 +1,39 @@
 ## File:099_utils_BR
 ## Objective: 
-## Ingest data and save it to Data_Raw
+## provides minimal utils an load the packages required.
 
-## Libraries
-library(tidyverse)
-library(sidrar)
-library(chirps)
-library(zip)
-library(rnaturalearth)
-library(sf)
-library(curl)
-library(readxl)
-library(microdatasus)
-library(fixest)
-library(modelsummary)  
-library(tmap)
+required_packages <- c(
+  "tidyverse",
+  "sidrar",
+  "chirps",
+  "zip",
+  "rnaturalearth",
+  "sf",
+  "curl",
+  "readxl",
+  "microdatasus",
+  "fixest",
+  "modelsummary",
+  "tmap",
+  "httr",
+  "arrow",
+  "geobr"
+)
+
+Library_checks <- function(pkg) {
+  if (!requireNamespace(pkg, quietly = TRUE)) {
+    message(paste("Installing:", pkg))
+    install.packages(pkg, dependencies = TRUE)
+  }
+}
+
+lapply(required_packages, Library_checks)
+lapply(required_packages, library, character.only = TRUE)
 
 
 ## Download tools TOOLS
 ## function: Download_files_2_Raw
-## Objectives: download zio from URL. Some trial and error, results in small modifications.
+## Objectives: download zip from URL. Some trial and error, results in small modifications.
 # Educ
 Download_RAW_files=function(URL="TEXT",dir="Data_raw"){
   # Had 2 Increase time outs to donwload data, directly. 
@@ -140,7 +154,6 @@ File_out=paste(dir,paste(Source,Year,"m",mm,sep = "-"),sep = "/")
   }
 Download_health_facility_files=function(Source="CADASTRO-CNES",
                                         dir="Data_raw/CADASTRO_CNES"){
-  require(geobr)
   # Had 2 Increase time outs to donwload data, directly. 
   options(timeout = max(2400, getOption("timeout")))  
   if (!dir.exists(dir)){ 
@@ -167,8 +180,7 @@ Download_health_facility_files=function(Source="CADASTRO-CNES",
 }
 # Climate data.
 Download_PARQUET_files=function(URL="TEXT",FILE="total_precipitation_sum.parquet",dir="Data_raw/Climate"){
-  require(httr)
-  require(arrow)
+
   # Had 2 Increase time outs to donwload data, directly. 
   options(timeout = max(2400, getOption("timeout")))  
   File_2_check <- FILE

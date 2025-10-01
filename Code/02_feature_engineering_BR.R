@@ -3,7 +3,7 @@
 ## Read data, perform feature engineering and return a formatted panel to run models. 
 ## Panel structure Year X Municipalit: Variable, climate shocks (rainfall)
 
-source(file = "Code/99_utils.R")
+# source(file = "Code/99_utils.R")
 SAEB_MUNICIPAL_PANEL=readRDS(file = "Data_raw/SAEB_table/data_PANEL_clean.RDS")
 
 
