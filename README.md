@@ -1,4 +1,4 @@
-# Policy-Analytics-Climate
+# Policy-Analytics: Climate shocks on education outcomes
 This repo contains the replication package for a policy analytics on climate challenges and development outcomes project. The repo provides the code used and clean versions of the data used as RDS for replication purposes. The raw data is available upon request or found in the files described in the data sources section or in [data links](./Data_links/):
 
 ## The following data is made available
